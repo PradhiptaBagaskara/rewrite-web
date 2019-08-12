@@ -93,6 +93,7 @@ class M_api extends CI_Model {
 		$this->db->join('kategori', 'cerita.id_kategori = kategori.id_kategori');
 		$this->db->join('user', 'cerita.id_user = user.id_user');
 		$this->db->where($field, $value);
+		$this->db->where('status', 'enable');
 		$this->db->order_by('cerita.date', 'desc');
 		// $this->db->where('cerita.id_user', 'user.id_user');
 		// $this->db->where('cerita.id_kategori', 'kategori.id_kategori');
