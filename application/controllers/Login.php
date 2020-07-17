@@ -27,13 +27,15 @@ class Login extends CI_Controller {
 			
 		}		
 		if(!empty($this->session->userdata('id'))){
-			$this->db->where('id_admin', $db['id']);
-			$del = $this->db->delete('session');
-			if ($del) {
-			redirect('admin/home', 'refresh');
-				# code...
-			}
+			// $this->db->where('id_admin', $db['id']);
+			// $del = $this->db->delete('session');
+			// if ($del) {
+			// redirect('admin/home', 'refresh');
+
+			// 	# code...
+			// }
 			redirect('admin/home','refresh');
+			exit();
 			// echo $this->session->userdata('id');
 		}
 		else{
@@ -48,7 +50,9 @@ class Login extends CI_Controller {
 	{
  
 		$output = array('error' => false);
- 
+		if(!$_POST){
+			echo json_encode(['error'=> true, 'message'=> 'invalid method' ]);
+		}else{
 		$email = $_POST['email'];
 		$password = $_POST['password'];
 
@@ -86,6 +90,7 @@ class Login extends CI_Controller {
 		}
  
 		echo json_encode($output); 
+	}
 		// $this->load->view('v_login');
 	}
 

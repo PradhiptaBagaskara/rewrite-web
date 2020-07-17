@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>ReaWrite</title>
+  <title>Lets Write</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -31,7 +31,7 @@
   
 <div class="login-box">
   <div class="login-logo">
-    <a href="assets/index2.html"><b>ReaWrite</b></a>
+    <a href="assets/index2.html"><b>Lets Write</b></a>
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
@@ -139,6 +139,7 @@ $('#btn-login').on('click', function(){
                 location.reload();
               }, 3000);
             }
+            
  
             }
     });

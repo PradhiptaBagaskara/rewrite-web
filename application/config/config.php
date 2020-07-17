@@ -32,7 +32,7 @@ if (php_sapi_name() === 'cli')  {
 							. (($_SERVER['SERVER_PORT'] != 80 && $_SERVER['SERVER_PORT'] != 443) 
 							? ':' . $_SERVER['SERVER_PORT'] : '');
 }
-// $config['base_url'] = "http://localhost/reawrite/ci/";
+// $config['base_url'] = "http://localhost/reawrite/";
 /*
 |--------------------------------------------------------------------------
 | Index File
